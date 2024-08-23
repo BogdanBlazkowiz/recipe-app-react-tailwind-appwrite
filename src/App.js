@@ -4,14 +4,19 @@ import { UserProvider, useUser } from "./lib/context/user";
 import {RecipesProvider} from "./lib/context/recipes"
 
 function App() {
-    const isLoginPage = window.location.pathname === "/login";
+    const isLoginPage = (window.location.pathname === "/login");
 
     return (
-        <div className="bg-amber-500 pl-20 pr-20 pt-5 h-max overflow-hidden">
+        <div className="bg-amber-500 bg-auto pl-20 pr-20 pt-5 h-max overflow-hidden">
             <UserProvider>
                 <RecipesProvider>
                     <Navbar /> {/* Add the navbar before page content */}
                     <main className="flex items-center flex-col gap-2 pt-4 pb-4">{isLoginPage ? <Login /> : <Home />}</main>
+                    <div className="h-full opacity-0 flex-col-reverse">
+                        {["a", "b", "c", "d", "b", "c", "d", "b", "c", "d", "b", "c", "d", "b"].map((elem) => {
+                            return <li>elem</li>
+                        })}
+                    </div>
                 </RecipesProvider>
             </UserProvider>
         </div>
