@@ -129,7 +129,7 @@ export function Home() {
                         }}>
                             <div className="flex flex-col justify-between items-center w-1/2 gap-5">
                                 <div className="flex items-center w-full justify-between gap-10">
-                                    <label className="w-40" htmlFor="title">Title:</label>
+                                    <label className="text-zinc-50 w-40" htmlFor="title">Title:</label>
                                     <input
                                         className="w-full rounded-2xl p-2"
                                         type="text"
@@ -143,7 +143,7 @@ export function Home() {
                                     />
                                 </div>
                                 <div className="flex items-center w-full justify-between gap-10">
-                                    <label className="w-40" htmlFor="desc">Description:</label>
+                                    <label className="text-zinc-50 w-40" htmlFor="desc">Description:</label>
                                     <textarea
                                         className="w-full h-32 rounded-2xl p-2"
                                         placeholder="Description"
@@ -156,7 +156,7 @@ export function Home() {
                                     />
                                 </div>
                                 <div className=" h-60 flex items-center w-full gap-10">
-                                    <label className="w-40" htmlFor="recipe-picture">Picture for the recipe:</label>
+                                    <label className="text-zinc-50 w-40" htmlFor="recipe-picture">Picture for the recipe:</label>
                                     <div className="flex flex-col gap-2 items-center justify-center w-80 h-60">
                                         <input
                                             className="rounded-2xl p-2"
@@ -167,7 +167,7 @@ export function Home() {
                                                 setRecipePicture(event.target.files[0]);
                                             }}
                                         />
-                                        <img className="w-56 h-40 object-cover" src={preview} alt="preview"></img>
+                                        <img className="text-zinc-50 w-56 h-40 object-cover" src={preview} alt="preview"></img>
                                     </div>
                                 </div>
                             </div>
@@ -177,7 +177,7 @@ export function Home() {
                                     {ingredientInputs.map((elem, index) => {
                                         return <div className="flex items-center gap-2" key={index}>
 
-                                            <label className="w-40" htmlFor={"ingredient-" + index}>{"Ingredient " + index + ":"}</label>
+                                            <label className="text-zinc-50 w-40" htmlFor={"ingredient-" + index}>{"Ingredient " + index + ":"}</label>
                                             <input
                                                 className="w-60 rounded-md p-2"
                                                 type="text"
